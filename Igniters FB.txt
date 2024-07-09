@@ -1,0 +1,19 @@
+Igniters FB
+project id - Igniters-street-auto
+web API key - AIzaSyBT_1S6fRBFGjPbTRajulcjf-C9Vq6ihEc
+url - https://igniters-street-auto-default-rtdb.asia-southeast1.firebasedatabase.app/
+
+auth - email - sri.igniters@gmail.com
+	  - pass  - sri@123
+
+firebase sdk
+
+FileInputStream serviceAccount =
+new FileInputStream("path/to/serviceAccountKey.json");
+
+FirebaseOptions options = new FirebaseOptions.Builder()
+  .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+  .setDatabaseUrl("https://igniters-street-auto-default-rtdb.asia-southeast1.firebasedatabase.app")
+  .build();
+
+FirebaseApp.initializeApp(options);
