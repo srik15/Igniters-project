@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
-    Button logout;
+    Button logout, nextpg;
     TextView textView,area1;
     FirebaseUser user;
     private static final String TAG = "MainActivity";
@@ -97,5 +97,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+
+        nextpg = findViewById(R.id.nextpage);
+        nextpg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TrialPage.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 }
