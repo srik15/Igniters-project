@@ -58,21 +58,12 @@ public class MainActivity extends AppCompatActivity {
             textView.setText(user.getEmail());
         }
 //        logout code
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(getApplicationContext(), Login.class);
-                startActivity(intent);
-                finish();
-            }
+        logout.setOnClickListener(view -> {
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(getApplicationContext(), Login.class);
+            startActivity(intent);
+            finish();
         });
-
-//        read value from firebase
-        // Read from the database
-//        FirebaseApp.initializeApp(MainActivity.this);
-//        FirebaseDatabase database =FirebaseDatabase.getInstance();
-//        database.getReference().child("chromepet").child();
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -87,8 +78,6 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Log.w(TAG, "Value is null");
                 }
-//                Log.d(TAG, "Value is: " + value);
-//                area1.setText(value);
             }
 
             @Override
@@ -99,13 +88,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         nextpg = findViewById(R.id.nextpage);
-        nextpg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TrialPage.class);
-                startActivity(intent);
-                finish();
-            }
+        nextpg.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), HomePage.class);
+            startActivity(intent);
+            finish();
         });
 
     }
