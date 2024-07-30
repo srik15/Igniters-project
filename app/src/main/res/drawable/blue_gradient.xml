@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Top to Bottom Gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#8007458B"
+                android:useLevel="true"
+            android:endColor="#021225"
+            android:angle="270"/>
+        </shape>
+    </item>
+
+    <!-- Bottom to Top Gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#021225"
+            android:endColor="#8007458B"
+            android:angle="90"/>
+        </shape>
+    </item>
+</layer-list>
+
+
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:shape="rectangle">-->
+
+<!--&lt;!&ndash;    <gradient&ndash;&gt;-->
+<!--&lt;!&ndash;        android:type="radial"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:centerColor="#021225"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:startColor="#07458B"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:endColor="#9DCAFD"&ndash;&gt;-->
+<!--&lt;!&ndash;        />&ndash;&gt;-->
+<!--    <gradient-->
+<!--        android:type="linear"-->
+<!--        android:endColor="#021225"-->
+<!--        android:centerColor="#07458B"-->
+<!--        android:startColor="#07458B"-->
+<!--        android:angle="90">-->
+<!--    </gradient>-->
+<!--    <gradient-->
+<!--        android:type="linear"-->
+<!--        android:endColor="#021225"-->
+<!--        android:centerColor="#07458B"-->
+<!--        android:startColor="#07458B"-->
+<!--        android:angle="270">-->
+<!--    </gradient>-->
+
+<!--&lt;!&ndash;    <gradient&ndash;&gt;-->
+<!--&lt;!&ndash;        android:type="linear"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:endColor="#021225"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:centerColor="#07458B"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:startColor="#07458B"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:angle="270">&ndash;&gt;-->
+<!--&lt;!&ndash;    </gradient>&ndash;&gt;-->
+<!--</shape>-->

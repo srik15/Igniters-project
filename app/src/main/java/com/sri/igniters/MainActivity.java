@@ -7,11 +7,9 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -23,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
-    Button logout, nextpg;
+    Button logout, nextpg,addlight;
     TextView textView,area1;
     FirebaseUser user;
     private static final String TAG = "MainActivity";
@@ -89,9 +87,16 @@ public class MainActivity extends AppCompatActivity {
 
         nextpg = findViewById(R.id.nextpage);
         nextpg.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), HomePage.class);
+            Intent intent = new Intent(getApplicationContext(), AreaPage.class);
             startActivity(intent);
             finish();
+        });
+
+
+        addlight = findViewById(R.id.addlight);
+        addlight.setOnClickListener(view ->{
+            Intent intent = new Intent(getApplicationContext(), LocationPage.class);
+            startActivity(intent);
         });
 
     }

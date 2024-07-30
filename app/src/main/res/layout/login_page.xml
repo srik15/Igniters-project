@@ -18,7 +18,7 @@
         android:id="@+id/logo"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/igniters_style_text"
+        android:src="@drawable/logo_rounded"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
