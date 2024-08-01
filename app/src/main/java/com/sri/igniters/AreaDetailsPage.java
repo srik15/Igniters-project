@@ -30,26 +30,6 @@ public class AreaDetailsPage extends AppCompatActivity {
 
         TextView lightCountTextView = findViewById(R.id.lightCountTextView);
 
-        // firestore
-//        FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-//        db.collection("areas").document("chromepet")
-//                .get()
-//                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//                       @Override
-//                       public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                            for(DocumentSnapshot doc: task.getResult()){
-//                                String irval = doc.getString("ir sensor");
-//                            }
-////                                               if (task.isSuccessful()) {
-////                                                   for (QueryDocumentSnapshot document : task.getResult()) {
-////                                                       Log.d(TAG, document.getId() + " => " + document.getData());
-////                                                   }
-////                                               } else {
-////                                                   Log.w(TAG, "Error getting documents.", task.getException());
-////                                               }
-//                       }
-//                   });
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference docRef = db.collection("areas").document("chromepet");
@@ -74,28 +54,6 @@ public class AreaDetailsPage extends AppCompatActivity {
                 lightCountTextView.setText("No such document");
             }
         });
-
-//        docRef.get().addOnCompleteListener(task -> {
-//            if(task.isSuccessful()){
-//                DocumentSnapshot document = task.getResult();
-//                if(document.exists()){
-//                    irval = document.getString("ir");
-//                    if (irval != null) {
-//                        // Use the irValue here
-//                        System.out.println("IR value: " + irval);
-//                        lightCountTextView.setText(String.valueOf(irval));
-//                    } else {
-//                        System.out.println("IR field does not exist in the document");
-//                    }
-//                }else {
-//                    System.out.println("No such document");
-//                }
-//            }else {
-//                System.out.println("Get failed with " + task.getException());
-//            }
-//        });
-
-//        txt1.setText(irval);
 
 
         // Get the data passed from the previous activity

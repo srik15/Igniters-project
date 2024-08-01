@@ -4,11 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".AreaDetailedPage"  >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".Area1">
 
         <ImageView
@@ -72,7 +73,7 @@
 
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_weight="1"
                     android:layout_margin="20dp"
                     android:alpha=".8"
@@ -95,6 +96,7 @@
                             android:textSize="15sp" />
 
                         <TextView
+                            android:id="@+id/noflight"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/yatraoneregular"
@@ -106,7 +108,7 @@
 
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_weight="1"
                     android:layout_margin="20dp"
                     android:alpha=".8"
@@ -129,6 +131,7 @@
                             android:textSize="20sp" />
 
                         <TextView
+                            android:id="@+id/ldrvalue"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/yatraoneregular"
@@ -145,7 +148,7 @@
 
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_weight="1"
                     android:layout_margin="20dp"
                     android:background="@drawable/transparent_card_shadow"
@@ -168,6 +171,7 @@
                             android:textSize="15sp" />
 
                         <TextView
+                            android:id="@+id/rainsensor"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/yatraoneregular"
@@ -179,7 +183,7 @@
 
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_weight="1"
                     android:layout_margin="20dp"
                     android:alpha=".8"
@@ -203,6 +207,7 @@
                             android:textSize="15sp" />
 
                         <TextView
+                            android:id="@+id/currentreading"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/yatraoneregular"
@@ -264,6 +269,7 @@
                             android:textColor="@color/black"
                             android:textSize="17sp" />
                         <TextView
+                            android:id="@+id/lightstatus"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/yatraoneregular"
@@ -299,6 +305,7 @@
                             android:textSize="15sp" />
 
                         <Button
+                            android:id="@+id/lighttoggle_btn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="on"/>
@@ -307,5 +314,15 @@
             </TableRow>
         </TableLayout>
 
+        <TextView
+            android:id="@+id/errormsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="bottom"
+            app:layout_constraintTop_toBottomOf="@id/table2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

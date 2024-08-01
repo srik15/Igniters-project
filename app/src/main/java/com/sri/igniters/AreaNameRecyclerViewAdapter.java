@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -49,7 +50,7 @@ public class AreaNameRecyclerViewAdapter extends RecyclerView.Adapter<AreaNameRe
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView areaName;
-        Button areaDetails;
+        ImageButton areaDetails;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

@@ -22,13 +22,10 @@ public class AreaPage extends AppCompatActivity {
 
         AreaNameRecyclerViewAdapter adapter = new AreaNameRecyclerViewAdapter(this, areaNameModels);
 
-        adapter.setOnItemClickListener(new AreaNameRecyclerViewAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(AreaNameModel areaNameModel) {
-                Intent intent = new Intent(AreaPage.this, AreaDetailsPage.class);
-                intent.putExtra("AREA_NAME", areaNameModel.getArea_name());
-                startActivity(intent);
-            }
+        adapter.setOnItemClickListener(areaNameModel -> {
+            Intent intent = new Intent(AreaPage.this, AreaDetailedPage.class);
+            intent.putExtra("AREA_NAME", areaNameModel.getArea_name());
+            startActivity(intent);
         });
 
         recyclerView.setAdapter(adapter);

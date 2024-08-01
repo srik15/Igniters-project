@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,7 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
-    Button logout, nextpg,addlight;
+    Button nextpg,addlight;
+    ImageButton logout;
     TextView textView,area1;
     FirebaseUser user;
     private static final String TAG = "MainActivity";
@@ -89,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
         nextpg.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), AreaPage.class);
             startActivity(intent);
-            finish();
         });
 
 
