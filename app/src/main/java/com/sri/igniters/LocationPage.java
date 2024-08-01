@@ -19,6 +19,7 @@ import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.Priority;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -33,6 +34,7 @@ public class LocationPage extends AppCompatActivity {
     private TextView locationTextView;
     private Button getLocationButton;
     private ListenerRegistration listenerRegistration;
+    LocationRequest locationRequest;
     private String area_name = "Chromepet";
 
 
@@ -54,6 +56,12 @@ public class LocationPage extends AppCompatActivity {
             getCurrentLocation();
         }
         });
+
+                locationRequest = new LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 1000)
+                .setWaitForAccurateLocation(false)
+                .setMinUpdateIntervalMillis(500)
+                .setMaxUpdateDelayMillis(1000)
+                .build();
     }
 
     private void getCurrentLocation() {
@@ -76,10 +84,15 @@ public class LocationPage extends AppCompatActivity {
 //                        }
 //                    }
 //                });
-        LocationRequest locationRequest = LocationRequest.create();
-        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        locationRequest.setInterval(10000);
-        locationRequest.setFastestInterval(5000);
+//        locationRequest = new LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 1000)
+//                .setWaitForAccurateLocation(false)
+//                .setMinUpdateIntervalMillis(500)
+//                .setMaxUpdateDelayMillis(1000)
+//                .build();
+//        LocationRequest locationRequest = LocationRequest.create();
+//        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+//        locationRequest.setInterval(1000);
+//        locationRequest.setFastestInterval(500);
 
         LocationCallback locationCallback = new LocationCallback() {
             @Override

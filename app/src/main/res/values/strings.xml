@@ -15,7 +15,7 @@ STREET LIGHTING</string>
     <string name="chromepet">Chromepet</string>
 
     <string-array name="area_name_val">
-        <item>Chromepet</item>
+        <item>chromepet</item>
         <item>thiruvanmyuir</item>
     </string-array>
 

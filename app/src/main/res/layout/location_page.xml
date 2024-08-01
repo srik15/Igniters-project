@@ -12,28 +12,30 @@
         android:id="@+id/top_design"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:background="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/top_design" />
 
     <ImageView
         android:id="@+id/map"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/tamilnadu_map_image"
-        app:layout_constraintTop_toTopOf="@id/top_design"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_design"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:contentDescription="@string/top_design"
-        tools:ignore="MissingConstraints" />
+        android:contentDescription="@string/top_design" />
 
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add light in an area"
-        android:textColor="@color/white"
-        android:fontFamily="@font/cormorantgaramondmedium"
-        android:textSize="35sp"
-        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/yatraoneregular"
+        android:textSize="25sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="80dp"
@@ -45,11 +47,13 @@
         android:layout_marginBottom="100dp"
         android:fontFamily="@font/cormorantgaramondsemibold"
         android:padding="10dp"
+        android:layout_margin="10dp"
         android:text="Click to add a street light location to the map"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/get_location_btn"/>
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/get_location_btn"
+        app:layout_constraintTop_toBottomOf="@+id/top_design" />
 
     <Button
         android:id="@+id/get_location_btn"
